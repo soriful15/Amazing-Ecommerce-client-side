@@ -9,6 +9,7 @@ import Login from "../Page/Login/Login";
 import Dashboard from "../Page/Dashboard/Dashboard";
 import CustomersList from "../Page/Dashboard/CustomersList/CustomersList";
 import AddProduct from "../Page/Dashboard/AddProduct/AddProduct";
+import ProductList from "../Page/Dashboard/ProductList/ProductList";
 const router = createBrowserRouter([
   {
     path: '/',
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path:'addProduct',
         element:<AddProduct></AddProduct>
+      },
+      {
+        path:'productList',
+        element:<ProductList></ProductList>
       },
     ]
   },

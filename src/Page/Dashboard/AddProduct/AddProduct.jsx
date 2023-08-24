@@ -68,7 +68,7 @@ const AddProduct = () => {
                 <h1 className='text-center mt-10 lg:text-4xl text-lg text-sky-800 '>Add Product</h1>
 
 
-                <form onSubmit={handleSubmit(onSubmit)} className='mt-16 lg:px-7'>
+                <form onSubmit={handleSubmit(onSubmit)} className='mt-16 lg:ml-24'>
                     {errors.exampleRequired && <span>This field is required</span>}
                     <div className='grid lg:grid-cols-2 gap-4 px-2'>
 
@@ -131,7 +131,7 @@ const AddProduct = () => {
                                 <option value="T-Shirt">T-Shirt</option>
                                 <option value="shoe">shoe</option>
                                 <option value="Sunglass">Sunglass</option>
-                                <option value="Pent">Pent</option>
+                              
                             </select>
 
                         </div>
