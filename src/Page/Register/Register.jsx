@@ -12,6 +12,7 @@ import { useContext, useState } from 'react';
 
 const Register = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext)
+    // console.log(createUser)
   
     const navigate = useNavigate();
     const [error, setError] = useState('')
@@ -31,7 +32,7 @@ const Register = () => {
                 updateUserProfile(data.name, data.photoURL, data.email, data.number)
                     .then(() => {
                         // console.log('update Profile')
-                        const saveUser = { name: data.name, image: data.photoURL, email: data.email,number: data.number }
+                        const saveUser = { name: data.name, photoURL: data.photoURL, email: data.email,number: data.number }
                         fetch('http://localhost:5000/users', {
                             method: 'POST',
                             headers: { 'content-type': 'application/json' },
@@ -171,3 +172,5 @@ const Register = () => {
 };
 
 export default Register;
+
+

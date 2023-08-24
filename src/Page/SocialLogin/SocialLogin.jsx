@@ -1,8 +1,9 @@
-import React, { useContext } from 'react';
+
 
 import { useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { useContext } from 'react';
 
 const SocialLogin = () => {
     const { googleProvider } = useContext(AuthContext)
@@ -15,7 +16,7 @@ const SocialLogin = () => {
         .then((result) => {
             const loggedInUser = result.user;
             console.log(loggedInUser)
-            const saveUser = { name: loggedInUser.displayName,  image: loggedInUser.photoURL ,  email: loggedInUser.email,number: loggedInUser.number}
+            const saveUser = { name: loggedInUser.displayName,  photoURL: loggedInUser.photoURL ,email: loggedInUser.email,number: loggedInUser.number}
             fetch('http://localhost:5000/users', {
                 method: 'POST',
                 headers: { 'content-type': 'application/json' },

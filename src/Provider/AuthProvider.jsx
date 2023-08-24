@@ -1,5 +1,5 @@
 
-import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup,  signOut, updateProfile } from "firebase/auth";
 
 
 import axios from 'axios';
@@ -8,6 +8,7 @@ import { createContext, useEffect, useState } from "react";
 export const AuthContext = createContext(null)
 
 const auth = getAuth(app)
+// console.log(auth)
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
@@ -15,6 +16,7 @@ const AuthProvider = ({ children }) => {
 
 
     const createUser = (email, password) => {
+        console.log(email,password)
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
@@ -49,15 +51,15 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
 
 
-        const unsubscribe = onAuthStateChanged(auth, loggedUser => {
-            console.log('logged in user inside auth state observe', loggedUser);
-            setUser(loggedUser)
+        const unsubscribe = onAuthStateChanged(auth, currentUser => {
+            console.log('logged in user inside auth state observe', currentUser);
+            setUser(currentUser)
             // setLoading(false)
 
 
             // jwt
-            if (loggedUser) {
-                axios.post('http://localhost:5000/jwt', { email: loggedUser.email })
+            if (currentUser) {
+                axios.post('http://localhost:5000/jwt', { email: currentUser.email })
                     .then(data => {
                         // console.log(data.data.token)
                         localStorage.setItem('JwtTokenSecret', data.data.token)
@@ -77,9 +79,15 @@ const AuthProvider = ({ children }) => {
         }
 
     }, [])
+   
+
+
+
+
     const authInfo = {
         createUser, singIn, user, loading, googleProvider, logOut, updateUserProfile
     }
+    console.log(authInfo)
     return (
         <>
             <AuthContext.Provider value={authInfo} >

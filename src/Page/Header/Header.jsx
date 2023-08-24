@@ -1,12 +1,11 @@
-// import React, { useContext } from 'react';
-// import { Link, NavLink } from 'react-router-dom';
-import {  NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/logo/logo.png';
 
 // import adminUsers from '../hooks/adminUsers';
-// import { AuthContext } from '../../Provider/AuthProvider';
+import { AuthContext } from '../../Provider/AuthProvider';
 const Header = () => {
-    // const { user, logOut } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
 
     // const [isAdmin] = adminUsers()
   
@@ -19,13 +18,13 @@ const Header = () => {
  
 
 
-    // const handleLogOut = () => {
-    //     logOut()
-    //         .then(result => {
-    //             console.log(result)
-    //         })
-    //         .catch(error => console.log(error))
-    // }
+    const handleLogOut = () => {
+        logOut()
+            .then(result => {
+                console.log(result)
+            })
+            .catch(error => console.log(error))
+    }
 
 
 
@@ -38,9 +37,6 @@ const Header = () => {
         </NavLink></li>
         <li> <NavLink to='/cartView' title='Cart View' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
         Cart View
-        </NavLink></li>
-        <li> <NavLink to='/login' title='login' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
-        login
         </NavLink></li>
 
 
@@ -87,7 +83,7 @@ const Header = () => {
                             {navBarOptions}
                         </ul>
                     </div>
-                    {/* {
+                    {
                         user ? <>
 
                             <div className="navbar-end">
@@ -110,7 +106,7 @@ const Header = () => {
                             </NavLink></li>
 
                         </div>
-                    } */}
+                    }
                 </div>
 
 
