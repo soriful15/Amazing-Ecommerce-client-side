@@ -38,7 +38,10 @@ const Header = () => {
         <li> <NavLink to='/cartView' title='Cart View' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
         Cart View
         </NavLink></li>
-
+        <li> <NavLink to="/dashboard/customersList" title='DashBoard' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
+        DashBoard
+        </NavLink></li>
+       
 
         {/* {
             user && <li> <NavLink to={

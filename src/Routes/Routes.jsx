@@ -6,6 +6,8 @@ import ErrorPage from '../LayOut/ErrorPage';
 import Home from "../Page/Home/Home/Home";
 import Register from "../Page/Register/Register";
 import Login from "../Page/Login/Login";
+import Dashboard from "../Page/Dashboard/Dashboard";
+import CustomersList from "../Page/Dashboard/CustomersList/CustomersList";
 const router = createBrowserRouter([
   {
     path: '/',
@@ -26,6 +28,17 @@ const router = createBrowserRouter([
         element: <Register></Register>
       },
 
+    ]
+  },
+  {
+    path: 'dashboard',
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path:'customersList',
+        element:<CustomersList></CustomersList>
+
+      }
     ]
   },
 ]);
