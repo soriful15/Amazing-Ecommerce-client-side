@@ -2,12 +2,12 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/logo/logo.png';
 
-// import adminUsers from '../hooks/adminUsers';
+
 import { AuthContext } from '../../Provider/AuthProvider';
 const Header = () => {
     const { user, logOut } = useContext(AuthContext)
 
-    // const [isAdmin] = adminUsers()
+
   
  
 
@@ -43,17 +43,7 @@ const Header = () => {
         </NavLink></li>
        
 
-        {/* {
-            user && <li> <NavLink to={
-                isAdmin
-                    ? "/dashboard/mangeUsers"
-                    : isInstructors
-                        ? "/dashboard/myClass"
-                        : "/dashboard/mySelectedClass"
-            } title='' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
-                Dashboard
-            </NavLink></li>
-        } */}
+      
 
        
 

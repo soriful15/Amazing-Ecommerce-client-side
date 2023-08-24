@@ -3,16 +3,12 @@ import { NavLink, Outlet } from 'react-router-dom';
 import Lottie from 'lottie-react'
 import dashboard from '../../assets/82340-dashboard-bi.json'
 // import { FaUserTie, FaUsers, FaWallet, FaHome, FaClipboardList, FaClipboard, FaClipboardCheck } from 'react-icons/fa';
-import { FaUserTie, FaUsers,  FaHome } from 'react-icons/fa';
-// import { HiUserAdd } from "react-icons/hi";
-// import adminUsers from '../hooks/adminUsers';
+import {  FaUsers, FaHome } from 'react-icons/fa';
+import { HiUserAdd } from "react-icons/hi";
+
 
 import { Helmet } from 'react-helmet-async';
 const Dashboard = () => {
-    // const [isAdmin] = adminUsers()
-
-
-    // const isAdmin=true;
     return (
         <>
             <Helmet>
@@ -36,21 +32,15 @@ const Dashboard = () => {
                             <Lottie animationData={dashboard} loop={true} />
                         </div>
                         <h1 className='text-amber-800 text-2xl text-center font-medium'>DashBoard</h1>
-                        {/* {
-                            isAdmin &&
-                                (<> */}
+                       
 
-                                    <div className='text-xl'>
-                                        <li><NavLink to='/dashboard/mangeClasses' className={({ isActive }) => isActive ? "bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500" : ''}><FaUserTie></FaUserTie> Mange Classes</NavLink ></li>
-                                        <li><NavLink to='/dashboard/customersList' className={({ isActive }) => isActive ? "bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500" : ''}><FaUsers></FaUsers>Customers List</NavLink ></li>
-                                    </div>
+                        <div className='text-xl'>
+                            <li><NavLink to='/dashboard/addProduct' className={({ isActive }) => isActive ? "bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500" : ''}><HiUserAdd></HiUserAdd> Add Product  </NavLink ></li>
+                            <li><NavLink to='/dashboard/customersList' className={({ isActive }) => isActive ? "bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500" : ''}><FaUsers></FaUsers>Customers List</NavLink ></li>
+                        </div>
 
 
-                                {/* </>) 
-
-
-                                
-                        } */}
+                      
                         <div className="divider"></div>
                         <div className='text-xl'>
                             <li className=''><NavLink to='/' ><FaHome></FaHome>Home</NavLink ></li>

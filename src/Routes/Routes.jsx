@@ -8,6 +8,7 @@ import Register from "../Page/Register/Register";
 import Login from "../Page/Login/Login";
 import Dashboard from "../Page/Dashboard/Dashboard";
 import CustomersList from "../Page/Dashboard/CustomersList/CustomersList";
+import AddProduct from "../Page/Dashboard/AddProduct/AddProduct";
 const router = createBrowserRouter([
   {
     path: '/',
@@ -38,7 +39,11 @@ const router = createBrowserRouter([
         path:'customersList',
         element:<CustomersList></CustomersList>
 
-      }
+      },
+      {
+        path:'addProduct',
+        element:<AddProduct></AddProduct>
+      },
     ]
   },
 ]);
