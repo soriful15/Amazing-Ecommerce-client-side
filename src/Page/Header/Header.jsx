@@ -52,7 +52,8 @@ const Header = () => {
     return (
         <>
 
-            <div className="navbar  lg:px-28 py-5 z-10   bg-green-200  sticky">
+            <div className="navbar  lg:px-28 py-5 z-10   bg-green-200  sticky md:w-full">
+          
 
 
 
@@ -68,7 +69,7 @@ const Header = () => {
                         </div>
                         <div className='w-full md:flex md:justify-center md:items-center'>
                             <img className='rounded-full w-20' src={logo} alt="" />
-                            <a className=" normal-case text-xl px-2 text-violet-600">Sports academies</a>
+                            <a className=" normal-case text-xl px-2 text-violet-600">Amazing Ecommerce</a>
                         </div>
                     </div>
                     <div className="navbar-center hidden lg:flex ">

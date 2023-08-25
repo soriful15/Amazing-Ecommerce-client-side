@@ -5,7 +5,7 @@ import { FaPhone, FaMapMarkerAlt, } from 'react-icons/fa';
 const Footer = () => {
     return (
         <>
-            <footer className="footer p-10 bg-orange-100  text-base-content mt-10">
+            <footer className="footer p-10 bg-orange-100 md:w-full mx-auto  text-base-content mt-10">
                 <div>
                     <img src={logo} className='rounded-full w-24' alt="" />
                     <p> <span className='lg:text-2xl text-blue-700'>Amazing Ecommerce</span>.<br />Providing reliable tech since 1992 <br /> Dhanmondi, Dhaka-1205 Bangladesh</p>
@@ -40,7 +40,7 @@ const Footer = () => {
                         </label>
                         <div className="relative">
                             <input type="text" placeholder="username@site.com" className="input input-bordered pr-16" />
-                            <button className="btn btn-primary absolute top-0 right-0 rounded-l-none mr-4">Subscribe</button>
+                            <button className="btn btn-primary absolute top-0 right-0 rounded-l-none mr-6">Subscribe</button>
                         </div>
                     </div>
                 </div>
