@@ -10,6 +10,7 @@ import Dashboard from "../Page/Dashboard/Dashboard";
 import CustomersList from "../Page/Dashboard/CustomersList/CustomersList";
 import AddProduct from "../Page/Dashboard/AddProduct/AddProduct";
 import ProductList from "../Page/Dashboard/ProductList/ProductList";
+import AllProductListView from "../Page/AllProductListView/AllProductListView";
 const router = createBrowserRouter([
   {
     path: '/',
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/productListView',
+        element: <AllProductListView></AllProductListView>
       },
 
     ]

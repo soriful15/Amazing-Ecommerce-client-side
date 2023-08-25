@@ -31,8 +31,8 @@ const AddProduct = () => {
                     // console.log(imageResponse)
                     const imgUrl = imageResponse.data.display_url
                     // console.log(data, imgUrl) 
-                    const { productName,brand, email, quantity, price,category, details } = data
-                    const newProduct = { productImg: imgUrl, productName,brand, email, quantity, price,category, details }
+                    const { productName,brand, email, quantity, ratings, price,category, details } = data
+                    const newProduct = { productImg: imgUrl, productName,brand, email, quantity,ratings, price,category, details }
                     axiosSecure.post('/addProduct', newProduct)
                         .then(data => {
                             console.log('after posting new newProduct item', data.data)
@@ -118,6 +118,14 @@ const AddProduct = () => {
 
                         <div className="form-control">
                             <label className="label">
+                                <span className="label-text">Rating</span>
+                            </label>
+                            <input type="text" placeholder="Rating" className="input input-bordered" {...register("ratings")} />
+                        </div>
+
+
+                        <div className="form-control">
+                            <label className="label">
                                 <span className="label-text">Price</span>
                             </label>
                             <input type="number" placeholder="price" className="input input-bordered" {...register("price", { required: true })} />
@@ -131,6 +139,7 @@ const AddProduct = () => {
                                 <option value="T-Shirt">T-Shirt</option>
                                 <option value="shoe">shoe</option>
                                 <option value="Sunglass">Sunglass</option>
+                                <option value="Watch">Watch</option>
                               
                             </select>
 

@@ -9,9 +9,9 @@ const ProductList = () => {
 
 
     const [axiosSecure] = useAxiosSecure();
-    const { data: allProducts = [] } = useQuery(['addProduct'], async () => {
+    const { data: allProducts = [] } = useQuery(['allProduct'], async () => {
 
-        const res = await axiosSecure.get(`/addProduct`)
+        const res = await axiosSecure.get(`/allProduct`)
         return res.data
 
     })
@@ -52,6 +52,7 @@ const ProductList = () => {
                                 <th>Category</th>
                                 <th>Quantity</th>
                                 <th>Price</th>
+                                <th>Ratings</th>
                             
                               
                             </tr>
@@ -80,6 +81,7 @@ const ProductList = () => {
                                         <td className='text-indigo-700'>{allProduct.category}</td>
                      <td className='text-pink-800'> {allProduct.quantity}</td>
                                         <td className='text-green-800'>${allProduct.price}</td>
+                                        <td className='text-purple-900'>{allProduct.ratings}</td>
                                        
                                        
 

@@ -32,7 +32,7 @@ const Header = () => {
         <li> <NavLink to='/' title='' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
             Home
         </NavLink></li>
-        <li> <NavLink to='/productListView ' title='Product List View ' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
+        <li> <NavLink to='/productListView' title='Product List View ' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
         Product List View 
         </NavLink></li>
         <li> <NavLink to='/cartView' title='Cart View' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
