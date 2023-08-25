@@ -17,7 +17,7 @@ const SocialLogin = () => {
             const loggedInUser = result.user;
             console.log(loggedInUser)
             const saveUser = { name: loggedInUser.displayName,  photoURL: loggedInUser.photoURL ,email: loggedInUser.email,number: loggedInUser.number}
-            fetch('https://amazing-ecommerce-server-side.vercel.app/users', {
+            fetch('http://localhost:5000/users', {
                 method: 'POST',
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(saveUser)

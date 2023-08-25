@@ -10,6 +10,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import useCart from '../../hooks/useCart';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 
 
 const AllProductListView = () => {
@@ -38,7 +39,7 @@ const AllProductListView = () => {
             selectedItemId:Product._id, productImg:Product.productImg, ratings:Product.ratings,
             email: user.email,price:Product.price, productName:Product.productName 
           }
-          fetch(`https://amazing-ecommerce-server-side.vercel.app/carts`, {
+          fetch(`http://localhost:5000/carts`, {
             method: 'POST',
             headers: {
               'content-type': 'application/json'
@@ -81,6 +82,9 @@ const AllProductListView = () => {
 
     return (
         <>
+         <Helmet>
+                <title>Amazing Ecommerce | AllProductListView Page</title>
+            </Helmet>
             <div className='container mx-auto mt-10'>
                 <h1 className='text-center md:text-5xl text-2xl text-teal-800'>All Product List View</h1>
 

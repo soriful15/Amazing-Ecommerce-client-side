@@ -1,11 +1,15 @@
 import { Rating } from '@smastrom/react-rating';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useLoaderData } from 'react-router-dom';
 const ProductDetailsView = () => {
     const productDetails=useLoaderData()
     const { brand, price, quantity, productName, category, details, productImg, ratings } = productDetails
     return (
         <>
+        <Helmet>
+                <title>Amazing Ecommerce | ProductDetailsView Page</title>
+            </Helmet>
             <div className='container mx-auto mt-16 max-w-7xl'>
 
 
