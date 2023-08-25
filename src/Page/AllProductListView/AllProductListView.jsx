@@ -6,6 +6,7 @@ import 'react-tabs/style/react-tabs.css';
 import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css'
 import { FaEye } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 const AllProductListView = () => {
@@ -39,7 +40,7 @@ const AllProductListView = () => {
                                         <figure><img src={Product.productImg} className='h-72 w-full' alt="Shoes" /></figure>
                                         <p className='absolute right-0 bg-slate-900 text-white  mr-4 mt-4 px-4 py-2'>${Product.price}</p>
                                         <div className='absolute left-0 mt-4 px-4 py-2'>
-                                            <p className=' btn w-20  btn-neutral btn-sm font-bold text-cyan-400 flex'><FaEye></FaEye></p>
+<Link to={`/productDetailsView/${Product._id}`}> <p className=' btn w-20  btn-neutral btn-sm font-bold text-cyan-400 flex'><FaEye></FaEye></p></Link>
                                         </div>
                                         <div className=" card-body ">
                                             <h2 className="card-title text-black">{Product.productName}</h2>
@@ -77,7 +78,7 @@ const AllProductListView = () => {
                                         <figure><img src={Product.productImg} className='h-72 w-full' alt="Shoes" /></figure>
                                         <p className='absolute right-0 bg-slate-900 text-white  mr-4 mt-4 px-4 py-2'>${Product.price}</p>
                                         <div className='absolute left-0 mt-4 px-4 py-2'>
-                                            <p className=' btn w-20  btn-neutral btn-sm font-bold text-cyan-400 flex'><FaEye></FaEye></p>
+                                        <Link to={`/productDetailsView/${Product._id}`}> <p className=' btn w-20  btn-neutral btn-sm font-bold text-cyan-400 flex'><FaEye></FaEye></p></Link>
                                         </div>
                                         <div className=" card-body ">
                                             <h2 className="card-title text-black">{Product.productName}</h2>
@@ -107,7 +108,7 @@ const AllProductListView = () => {
                                         <figure><img src={Product.productImg} className='h-72 w-full' alt="Shoes" /></figure>
                                         <p className='absolute right-0 bg-slate-900 text-white  mr-4 mt-4 px-4 py-2'>${Product.price}</p>
                                         <div className='absolute left-0 mt-4 px-4 py-2'>
-                                            <p className=' btn w-20  btn-neutral btn-sm font-bold text-cyan-400 flex'><FaEye></FaEye></p>
+                                        <Link to={`/productDetailsView/${Product._id}`}> <p className=' btn w-20  btn-neutral btn-sm font-bold text-cyan-400 flex'><FaEye></FaEye></p></Link>
                                         </div>
                                         <div className=" card-body ">
                                             <h2 className="card-title text-black">{Product.productName}</h2>
@@ -140,7 +141,7 @@ const AllProductListView = () => {
                                         <figure><img src={Product.productImg} className='h-72 w-full' alt="Shoes" /></figure>
                                         <p className='absolute right-0 bg-slate-900 text-white  mr-4 mt-4 px-4 py-2'>${Product.price}</p>
                                         <div className='absolute left-0 mt-4 px-4 py-2'>
-                                            <p className=' btn w-20  btn-neutral btn-sm font-bold text-cyan-400 flex'><FaEye></FaEye></p>
+                                          <Link to={`/productDetailsView/${Product._id}`}> <p className=' btn w-20  btn-neutral btn-sm font-bold text-cyan-400 flex'><FaEye></FaEye></p></Link>
                                         </div>
                                         <div className=" card-body ">
                                             <h2 className="card-title text-black">{Product.productName}</h2>
