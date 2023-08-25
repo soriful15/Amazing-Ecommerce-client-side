@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       {
         path: '/productDetailsView/:id',
         element: <PrivateRoute><ProductDetailsView></ProductDetailsView></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/allProduct/${params.id}`)
+        loader: ({params})=> fetch(`https://amazing-ecommerce-server-side.vercel.app/allProduct/${params.id}`)
       },
 
     ]

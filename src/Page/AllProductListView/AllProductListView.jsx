@@ -39,7 +39,7 @@ const AllProductListView = () => {
             selectedItemId:Product._id, productImg:Product.productImg, ratings:Product.ratings,
             email: user.email,price:Product.price, productName:Product.productName 
           }
-          fetch(`http://localhost:5000/carts`, {
+          fetch(`https://amazing-ecommerce-server-side.vercel.app/carts`, {
             method: 'POST',
             headers: {
               'content-type': 'application/json'

@@ -33,7 +33,7 @@ const Register = () => {
                     .then(() => {
                         // console.log('update Profile')
                         const saveUser = { name: data.name, photoURL: data.photoURL, email: data.email,number: data.number }
-                        fetch('http://localhost:5000/users', {
+                        fetch('https://amazing-ecommerce-server-side.vercel.app/users', {
                             method: 'POST',
                             headers: { 'content-type': 'application/json' },
                             body: JSON.stringify(saveUser)
