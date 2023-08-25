@@ -12,6 +12,7 @@ import AddProduct from "../Page/Dashboard/AddProduct/AddProduct";
 import ProductList from "../Page/Dashboard/ProductList/ProductList";
 import AllProductListView from "../Page/AllProductListView/AllProductListView";
 import ProductDetailsView from "../Page/AllProductListView/ProductDetailsView";
+import CartView from "../Page/CartView/CartView";
 const router = createBrowserRouter([
   {
     path: '/',
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: '/productListView',
         element: <AllProductListView></AllProductListView>
+      },
+      {
+        path: '/cartView',
+        element: <CartView></CartView>
       },
       {
         path: '/productDetailsView/:id',
