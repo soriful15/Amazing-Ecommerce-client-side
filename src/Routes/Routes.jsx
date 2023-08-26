@@ -13,6 +13,8 @@ import ProductList from "../Page/Dashboard/ProductList/ProductList";
 import AllProductListView from "../Page/AllProductListView/AllProductListView";
 import ProductDetailsView from "../Page/AllProductListView/ProductDetailsView";
 import CartView from "../Page/CartView/CartView";
+import PrivateRoute from "./PrivateRoute";
+import OrderList from "../Page/Dashboard/OrderList/OrderList";
 const router = createBrowserRouter([
   {
     path: '/',
@@ -42,7 +44,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/productDetailsView/:id',
-        element: <ProductDetailsView></ProductDetailsView>,
+        element: <PrivateRoute><ProductDetailsView></ProductDetailsView></PrivateRoute>,
         loader: ({params})=> fetch(`https://amazing-ecommerce-server-side.vercel.app/allProduct/${params.id}`)
       },
 
@@ -64,6 +66,10 @@ const router = createBrowserRouter([
       {
         path:'productList',
         element:<ProductList></ProductList>
+      },
+      {
+        path:'orderList',
+        element:<OrderList></OrderList>,
       },
     ]
   },

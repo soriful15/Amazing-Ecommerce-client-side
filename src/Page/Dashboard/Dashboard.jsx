@@ -3,7 +3,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import Lottie from 'lottie-react'
 import dashboard from '../../assets/82340-dashboard-bi.json'
 // import { FaUserTie, FaUsers, FaWallet, FaHome, FaClipboardList, FaClipboard, FaClipboardCheck } from 'react-icons/fa';
-import {  FaUsers, FaHome,FaClipboardList } from 'react-icons/fa';
+import {  FaUsers, FaHome,FaClipboardList, FaListAlt } from 'react-icons/fa';
 import { HiUserAdd } from "react-icons/hi";
 
 
@@ -40,6 +40,7 @@ const Dashboard = () => {
                             <li><NavLink to='/dashboard/productList' className={({ isActive }) => isActive ? "bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500" : ''}><FaClipboardList></FaClipboardList>Product List</NavLink ></li>
 
                             <li><NavLink to='/dashboard/customersList' className={({ isActive }) => isActive ? "bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500" : ''}><FaUsers></FaUsers>Customers List</NavLink ></li>
+                            <li><NavLink to='/dashboard/orderList' className={({ isActive }) => isActive ? "bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500" : ''}><FaListAlt></FaListAlt>Order List</NavLink ></li>
                         </div>
 
 
