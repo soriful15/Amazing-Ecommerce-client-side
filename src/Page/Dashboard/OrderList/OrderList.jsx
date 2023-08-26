@@ -66,13 +66,13 @@ const OrderList = () => {
                                             {index + 1}
                                         </th>
                                         <td className='text-base font-bold'>
-                                            {orderList.customer.name}
+                                            {orderList.name}
                                         </td>
-                                        <td className='text-yellow-400'>{orderList.customer.email}</td>
-                                        <td className='text-indigo-700'>{orderList.customer.phone}</td>
-                     <td className='text-pink-800'> {orderList.customer.address}</td>
-                                        <td className='text-purple-900'>{orderList.purchase.product_name}</td>
-                                        <td className='text-green-800'>${orderList.purchase.price}</td>
+                                        <td className='text-yellow-400'>{orderList.email}</td>
+                                        <td className='text-indigo-700'>{orderList.phone}</td>
+                     <td className='text-pink-800'> {orderList.address}</td>
+                                        <td className='text-green-800'>${orderList.price}</td>
+                                        <td className='text-purple-900'>{orderList.product_name}</td>
                                        
                                        
 
