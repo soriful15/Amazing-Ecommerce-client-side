@@ -44,7 +44,7 @@ const handleAddBuy6=()=>{
             <h1 className='mx-auto container  text-3xl mt-20 text-center text-teal-400'>  Special Offers</h1>
 
 
-         <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-7 mx-auto container mt-12'>
+         <div className='grid lg:grid-cols-2 xl:grid-cols-3 md:grid-cols-2 gap-7 mx-auto container mt-12'>
 
 
 

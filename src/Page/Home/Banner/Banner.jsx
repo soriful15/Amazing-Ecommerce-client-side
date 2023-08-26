@@ -7,7 +7,7 @@ import banner3 from '../../../assets/BannerImg/banner3.webp'
 const Banner = () => {
   return (
     <>
-      <div className="carousel md:w-full lg:max-w-5xl h-[500px] mt-5 lg:container mx-auto lg:ml-32 w-full">
+      <div className="carousel md:w-full lg:max-w-5xl h-[500px] mt-5 lg:container mx-auto lg:ml-12 xl:ml-32 w-full">
       <div id="slide1" className="carousel-item relative w-full">
         <img src={banner1} className="w-full rounded-2xl " />
         <div className="absolute flex items-center h-full  gap-5 transform  left-0  top-0   rounded-2xl bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] ">

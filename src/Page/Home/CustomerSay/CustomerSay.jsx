@@ -9,7 +9,7 @@ const CustomerSay = () => {
         <>
             <h1 className='mx-auto container text-teal-300 md:text-3xl text-lg text-center mt-20'>What Customer Are Saying</h1>
 
-            <div className='grid lg:grid-cols-3  md:grid-cols-2 gap-4 mx-auto container mt-10'>
+            <div className='grid lg:grid-cols-2 xl:grid-cols-3  md:grid-cols-2 gap-4 mx-auto container mt-10'>
 
 
 
