@@ -71,8 +71,8 @@ const OrderList = () => {
                                         <td className='text-yellow-400'>{orderList.email}</td>
                                         <td className='text-indigo-700'>{orderList.phone}</td>
                      <td className='text-pink-800'> {orderList.address}</td>
-                                        <td className='text-green-800'>${orderList.price}</td>
                                         <td className='text-purple-900'>{orderList.product_name}</td>
+                                        <td className='text-green-800'>${orderList.price}</td>
                                        
                                        
 
