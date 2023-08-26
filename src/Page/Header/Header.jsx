@@ -52,7 +52,7 @@ const Header = () => {
     return (
         <>
 
-            <div className="navbar  lg:px-28 py-5 z-10   bg-green-200  sticky md:w-full">
+            <div className="navbar  lg:px-28 py-5 z-10   bg-green-200  sticky md:w-full w-full">
           
 
 
